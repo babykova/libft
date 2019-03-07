@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/25 11:00:22 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/02 20:19:38 by ehayes           ###   ########.fr       */
+/*   Created: 2019/03/02 19:45:23 by ehayes            #+#    #+#             */
+/*   Updated: 2019/03/02 19:46:49 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,8 @@
 
 #include <stdlib.h>
 
-char	*ft_strcpy(char *dest, const char *src);
-int		ft_strlen(const char *str);
-
-char	*ft_strdup(const char *src)
+void	ft_memdel(void **ap)
 {
-	char *m;
-
-	m = (char*)malloc(sizeof(*m) * (ft_strlen(src) + 1));
-	m = ft_strcpy(m, src);
-	return (m);
+	free(*ap);
+	*ap = (NULL);
 }

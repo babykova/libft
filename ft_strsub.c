@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/25 11:00:22 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/02 20:19:38 by ehayes           ###   ########.fr       */
+/*   Created: 2019/03/02 16:05:33 by ehayes            #+#    #+#             */
+/*   Updated: 2019/03/02 20:57:13 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdlib.h>
-
-char	*ft_strcpy(char *dest, const char *src);
-int		ft_strlen(const char *str);
-
-char	*ft_strdup(const char *src)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *m;
+	char	*sub;
+	size_t	i;
 
-	m = (char*)malloc(sizeof(*m) * (ft_strlen(src) + 1));
-	m = ft_strcpy(m, src);
-	return (m);
+	i = 0;
+	s = s + start;
+	sub = ft_strnew(len);
+	if (sub == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		sub[i] = s[i];
+		i++;
+	}
+	return (sub);
 }

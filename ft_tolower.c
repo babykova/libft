@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/25 11:00:22 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/02 20:19:38 by ehayes           ###   ########.fr       */
+/*   Created: 2019/01/19 18:53:18 by ehayes            #+#    #+#             */
+/*   Updated: 2019/01/19 18:55:10 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdlib.h>
-
-char	*ft_strcpy(char *dest, const char *src);
-int		ft_strlen(const char *str);
-
-char	*ft_strdup(const char *src)
+int	ft_tolower(int c)
 {
-	char *m;
-
-	m = (char*)malloc(sizeof(*m) * (ft_strlen(src) + 1));
-	m = ft_strcpy(m, src);
-	return (m);
+	if ('A' <= c && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
