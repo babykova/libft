@@ -6,13 +6,13 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 18:13:07 by ehayes            #+#    #+#             */
-/*   Updated: 2019/01/19 18:16:57 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/11 17:16:19 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_iasdigit(int c)
+int	ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (c);

@@ -6,7 +6,7 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/02 14:37:30 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/02 20:32:09 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/11 18:18:34 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char *c;
+	char	*c;
+	int		i;
 
-	c = ft_strnew(ft_strlen(s);
+	i = 0;
+	c = ft_strnew(ft_strlen(s));
 	if (c == NULL)
 		return (NULL);
-	while (*s)
+	while (s[i] != '\0')
 	{
-		*c = (*f)(*s);
-		c++;
-		s++;
+		c[i] = f(s[i]);
+		i++;
 	}
 	return (c);
 }

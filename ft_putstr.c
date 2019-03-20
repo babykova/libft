@@ -6,19 +6,13 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/19 11:43:25 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/02 20:04:56 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/13 15:01:20 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c);
-
 void	ft_putstr(char const *str)
 {
-	while (*str != '\0')
-	{
-		ft_putchar(*str);
-		str++;
-	}
+	ft_putstr_fd(str, 1);
 }
