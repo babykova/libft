@@ -6,7 +6,7 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/15 18:20:31 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/20 21:17:21 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/23 23:02:19 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 void	*ft_memset(void *destination, int c, size_t n);
 void	ft_bzero(void *b, size_t n);
@@ -42,9 +44,7 @@ int		ft_tolower(int c);
 char	*ft_strdup(const char *src);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strncpy(char *dest, char *src, size_t n);
-//char	*ft_strncpy(char *dest, char *src, size_t n);
 void	ft_putstr(char const *str);
-//char	*ft_strcpy(char *dest, const char *src);
 void	ft_putchar(char c);
 void	ft_putnbr(int nb);
 void	ft_putchar_fd(char c, int fd);
@@ -65,9 +65,9 @@ int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
-char    **ft_strsplit(char const *s, char c);
+char	**ft_strsplit(char const *s, char c);
 char	*ft_strtrim(char const *s);
-char    *ft_itoa(int n);
-size_t  ft_strlcat(char *dst, const char *src, size_t size);
+char	*ft_itoa(int n);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif

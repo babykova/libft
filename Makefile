@@ -6,7 +6,7 @@
 #    By: ehayes <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/15 19:50:36 by ehayes            #+#    #+#              #
-#    Updated: 2019/03/20 21:16:52 by ehayes           ###   ########.fr        #
+#    Updated: 2019/03/23 20:56:06 by ehayes           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRCS = ft_memset.c \
 				ft_strjoin.c \
 				ft_strnew.c \
 				ft_putstr.c \
+				ft_putchar.c \
 				ft_putchar_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \

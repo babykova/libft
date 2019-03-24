@@ -6,7 +6,7 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/02 15:55:49 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/02 20:45:05 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/24 18:55:53 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,7 @@
 int	ft_strnequ(char const *s1, char const *s2,
 		size_t n)
 {
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	return (ft_strncmp((char *)s1, (char *)s2, n) == 0 ? 1 : 0);
 }

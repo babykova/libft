@@ -6,7 +6,7 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/02 15:43:47 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/02 20:20:25 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/24 19:01:50 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	return (ft_strcmp((char *)s1, (char *)s2) == 0);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	else
+		return (ft_strcmp((char *)s1, (char *)s2) == 0);
 }
