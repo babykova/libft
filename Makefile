@@ -6,7 +6,7 @@
 #    By: ehayes <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/15 19:50:36 by ehayes            #+#    #+#              #
-#    Updated: 2019/03/23 20:56:06 by ehayes           ###   ########.fr        #
+#    Updated: 2019/03/29 22:19:40 by ehayes           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,12 @@ SRCS = ft_memset.c \
 				ft_strtrim.c \
 				ft_strlcat.c \
 				ft_strsplit.c \
-				ft_itoa.c 
+				ft_itoa.c \
+				ft_lstnew.c \
+				ft_lstdelone.c \
+				ft_lstdel.c \
+				ft_lstiter.c
+
 OBJS = $(SRCS:.c=.o)
 
 RM = rm -f

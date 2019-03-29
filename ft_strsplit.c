@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen2.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/20 20:29:01 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/20 22:04:39 by ehayes           ###   ########.fr       */
+/*   Created: 2019/03/29 18:42:33 by ehayes            #+#    #+#             */
+/*   Updated: 2019/03/29 18:50:52 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_count(char const *s, char c)
 {
-	static int	count;
-	int			i;
+	int	count;
+	int	i;
 
 	i = 0;
 	count = 0;
@@ -34,8 +33,8 @@ static int	ft_count(char const *s, char c)
 
 static int	ft_len(char const *s, char c)
 {
-	static int	len;
-	int			i;
+	int	len;
+	int	i;
 
 	len = 0;
 	i = 0;
@@ -47,6 +46,16 @@ static int	ft_len(char const *s, char c)
 		len++;
 	}
 	return (len);
+}
+
+static char	**ft_free(char **s, int n)
+{
+	while (n > 0)
+	{
+		free(s[n]);
+		n--;
+	}
+	return (NULL);
 }
 
 char		**ft_strsplit(char const *s, char c)
@@ -66,7 +75,7 @@ char		**ft_strsplit(char const *s, char c)
 	{
 		x = 0;
 		if (!(str[k - 1] = ft_strnew(ft_len(&s[i], c) + 1)))
-			return (NULL);
+			return (ft_free(str, k - 1));
 		while (s[i] == c)
 			i++;
 		while (s[i] != '\0' && s[i] != c)

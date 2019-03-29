@@ -6,15 +6,16 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 14:03:31 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/13 14:12:59 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/27 20:23:13 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

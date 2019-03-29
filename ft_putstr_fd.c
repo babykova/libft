@@ -6,14 +6,15 @@
 /*   By: ehayes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 13:59:22 by ehayes            #+#    #+#             */
-/*   Updated: 2019/03/13 14:12:24 by ehayes           ###   ########.fr       */
+/*   Updated: 2019/03/27 20:22:32 by ehayes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	write(fd, s, ft_strlen(s));
 }
